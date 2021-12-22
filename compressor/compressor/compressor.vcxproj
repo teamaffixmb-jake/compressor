@@ -147,10 +147,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="compression_routines.h" />
+    <ClInclude Include="recovery_transform.h" />
+    <ClInclude Include="transform.h" />
+    <ClInclude Include="data_routines.h" />
+    <ClInclude Include="verification.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="compression_routines.cpp" />
+    <ClCompile Include="data_routines.cpp" />
+    <ClCompile Include="recovery_transform.cpp" />
+    <ClCompile Include="transform.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\affix-base\affix-base\affix-base.vcxproj">

@@ -15,6 +15,6 @@ int main()
 {
 	vector<uint8_t> l_input = random_bytes(10);
 	vector<uint8_t> l_entangled;
-	compression::entangle(l_input, l_entangled);
+
 
 }
