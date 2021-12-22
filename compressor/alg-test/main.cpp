@@ -32,12 +32,12 @@ std::string to_string(const bool& a_val)
 
 using affix_base::data::ptr;
 
-int main()
+void unit_test_entangler_detangler()
 {
 	while (true)
 	{
-		vector<uint8_t> l_input = random_bytes(9);
-		vector<uint8_t> l_knowns = random_bytes(3);
+		vector<uint8_t> l_input = random_bytes(12);
+		vector<uint8_t> l_knowns = random_bytes(2);
 
 		vector<uint8_t> l_full_input(l_input.size() + l_knowns.size());
 
@@ -55,10 +55,10 @@ int main()
 		l_entangler.transform();
 
 		vector<uint8_t> l_detangled(l_entangled.size());
-		compression::byte_detangler l_detangler(RESOLUTION_IN_BITS, 9);
-		l_detangler.push_back(new compression::byte_detangler(8, 1, l_full_input[9]));
-		l_detangler.push_back(new compression::byte_detangler(8, 1, l_full_input[10]));
-		l_detangler.push_back(new compression::byte_detangler(8, 1, l_full_input[11]));
+
+		compression::byte_detangler l_detangler(RESOLUTION_IN_BITS, l_input.size());
+		for (int i = 0; i < l_knowns.size(); i++)
+			l_detangler.push_back(new compression::byte_detangler(8, 1, l_knowns[i]));
 
 		l_detangler.link(l_entangled, l_detangled);
 		bool l_detangling_successful = l_detangler.transform();
@@ -68,5 +68,12 @@ int main()
 		std::cout << to_string(l_detangled) << std::endl;
 		std::cin.get();
 	}
+}
 
+int main()
+{
+	while (true)
+	{
+
+	}
 }
