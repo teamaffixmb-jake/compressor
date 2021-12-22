@@ -1,14 +1,14 @@
-#include "transformer.h"
+#include "byte_transformer.h"
 #include "data_routines.h"
 
 using namespace compression;
 
-transformer::~transformer()
+byte_transformer::~byte_transformer()
 {
 
 }
 
-transformer::transformer(
+byte_transformer::byte_transformer(
 	const uint8_t& a_max_output_resolution_in_bits
 )
 {
@@ -20,7 +20,14 @@ transformer::transformer(
 	
 }
 
-void transformer::link(
+bool byte_transformer::transform()
+{
+	if (m_next != nullptr)
+		return m_next->transform();
+	return true;
+}
+
+void byte_transformer::link(
 	std::vector<uint8_t>& a_input,
 	std::vector<uint8_t>& a_output,
 	const size_t& a_index)
@@ -32,7 +39,13 @@ void transformer::link(
 		m_next->link(a_input, a_output, a_index + 1);
 }
 
-void transformer::append(const affix_base::data::ptr<transformer>& a_next)
+void byte_transformer::push_back(
+	const affix_base::data::ptr<byte_transformer>& a_next
+)
 {
-	m_next = a_next;
+	if (m_next == nullptr)
+		m_next = a_next;
+	else
+		m_next->push_back(a_next);
+
 }

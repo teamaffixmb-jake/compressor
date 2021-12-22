@@ -18,16 +18,13 @@
     <ClInclude Include="data_routines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="transformer.h">
+    <ClInclude Include="byte_transformer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="variable_transformer.h">
+    <ClInclude Include="byte_entangler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="constant_transformer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="entangler.h">
+    <ClInclude Include="byte_detangler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -35,10 +32,13 @@
     <ClCompile Include="data_routines.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="transformer.cpp">
+    <ClCompile Include="byte_transformer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="variable_transformer.cpp">
+    <ClCompile Include="byte_entangler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="byte_detangler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -147,16 +147,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="entangler.h" />
-    <ClInclude Include="variable_transformer.h" />
-    <ClInclude Include="transformer.h" />
+    <ClInclude Include="byte_detangler.h" />
+    <ClInclude Include="byte_entangler.h" />
+    <ClInclude Include="byte_transformer.h" />
     <ClInclude Include="data_routines.h" />
-    <ClInclude Include="constant_transformer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="byte_detangler.cpp" />
+    <ClCompile Include="byte_entangler.cpp" />
     <ClCompile Include="data_routines.cpp" />
-    <ClCompile Include="variable_transformer.cpp" />
-    <ClCompile Include="transformer.cpp" />
+    <ClCompile Include="byte_transformer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\affix-base\affix-base\affix-base.vcxproj">
