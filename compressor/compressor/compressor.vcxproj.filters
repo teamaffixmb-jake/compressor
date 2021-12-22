@@ -18,13 +18,16 @@
     <ClInclude Include="data_routines.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="transform.h">
+    <ClInclude Include="transformer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="recovery_transform.h">
+    <ClInclude Include="variable_transformer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="verification.h">
+    <ClInclude Include="constant_transformer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="entangler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,10 +35,10 @@
     <ClCompile Include="data_routines.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="transform.cpp">
+    <ClCompile Include="transformer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="recovery_transform.cpp">
+    <ClCompile Include="variable_transformer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

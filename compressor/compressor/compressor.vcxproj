@@ -147,15 +147,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="recovery_transform.h" />
-    <ClInclude Include="transform.h" />
+    <ClInclude Include="entangler.h" />
+    <ClInclude Include="variable_transformer.h" />
+    <ClInclude Include="transformer.h" />
     <ClInclude Include="data_routines.h" />
-    <ClInclude Include="verification.h" />
+    <ClInclude Include="constant_transformer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="data_routines.cpp" />
-    <ClCompile Include="recovery_transform.cpp" />
-    <ClCompile Include="transform.cpp" />
+    <ClCompile Include="variable_transformer.cpp" />
+    <ClCompile Include="transformer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\affix-base\affix-base\affix-base.vcxproj">

@@ -1,5 +1,5 @@
 #pragma once
-#include "transform.h"
+#include "byte_transformer.h"
 
 namespace compression
 {
