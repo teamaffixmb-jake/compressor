@@ -36,6 +36,7 @@ byte_detangler::byte_detangler(
 
 bool byte_detangler::transform()
 {
+	//std::cout << m_index << std::endl;
 	if (m_plaintext.m_known)
 	{
 		// IF PLAINTEXT IS KNOWN, JUST VERIFY THAT THE OUTPUT SEQUENCE LOOKS CORRECT.
